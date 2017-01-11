@@ -39,3 +39,10 @@ function highAndLow(numbers){
   // 最后 return 成题目中的格式
   return high + ' ' + low;
 }
+
+/*************************************  2016-01-12  ***************************************/
+
+function highAndLow(numbers){
+  numbers = numbers.split(' ').sort((num1, num2) => {return num1 - num2});
+  return numbers[numbers.length - 1] + ' ' + numbers[0];
+}

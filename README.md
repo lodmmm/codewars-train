@@ -8,12 +8,15 @@ codewars 里面的练习题的个人解答, 以及一些平时遇到的场景的
     - `for` 循环遍历字符串, 利用 `indexOf` 方法确定结果结果数组里面是不是有当前判断的字母, `有 => pass`, `没有 => push`
     - 全小写字母, 可以直接 `sort()`, 之后 `arr => str`, 直接 `join('')`
 2. highest and lowest => 入参为类似 `'4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'` 的字符串, 要求找到其中的最大和最小的数字
+    - 2016-01-11
     - 先做 `str => arr` 的操作
     - 初始化 `low => Infinity`, `high => -Infinity`
     - 一次循环
         + `index < low` ? `low = index` : `do nothing`
         + `index > high` ? `high = index` : `do nothing`
     - 循环结束, 寻找也结束, 得到了 `low` 和 `high`
+    - 2016-01-12
+    - 直接使用 `sort` 函数进行排序, 排序之后取第一位和最后一位即可
 3. number-format-thousand => 千分位分隔符, 支持自己配置 point 标示和 thousands 的标示
     - `number => str`, 去空格
     - `point` 和 `thousands` 规定默认值
