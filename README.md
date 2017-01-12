@@ -8,14 +8,14 @@ codewars 里面的练习题的个人解答, 以及一些平时遇到的场景的
     - `for` 循环遍历字符串, 利用 `indexOf` 方法确定结果结果数组里面是不是有当前判断的字母, `有 => pass`, `没有 => push`
     - 全小写字母, 可以直接 `sort()`, 之后 `arr => str`, 直接 `join('')`
 2. highest and lowest => 入参为类似 `'4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'` 的字符串, 要求找到其中的最大和最小的数字
-    - 2016-01-11
+    - 2017-01-11
     - 先做 `str => arr` 的操作
     - 初始化 `low => Infinity`, `high => -Infinity`
     - 一次循环
         + `index < low` ? `low = index` : `do nothing`
         + `index > high` ? `high = index` : `do nothing`
     - 循环结束, 寻找也结束, 得到了 `low` 和 `high`
-    - 2016-01-12
+    - 2017-01-11
     - 直接使用 `sort` 函数进行排序, 排序之后取第一位和最后一位即可
 3. number-format-thousand => 千分位分隔符, 支持自己配置 point 标示和 thousands 的标示
     - `number => str`, 去空格
@@ -25,3 +25,12 @@ codewars 里面的练习题的个人解答, 以及一些平时遇到的场景的
         - 三位三位的取, 所以用正则 `match`
         - `match` 不到的位单独考虑
         - 最终结果拼上 `thousands` 分隔符
+4. shortest-word => 传入一大串以空格分割的单词的字符串, 类似这种 `'bitcoin take over the world maybe who knows perhaps'`, 要求返回最短的一个的 `length`
+    - 2017-01-12
+    - 先 `split(' ')` 处理字符串
+    - 创建一个数组, 做桶排序, `length` 作为桶的下标 --- 这里依据是否为空, 来确定是 `push` 还是初始化子项数组没太大意义, 就直接覆盖就可以了貌似
+    - 调用 `array` 的 `some` 方法, 找到第一个不为空的下标, 就是最小长度了
+    - 2017-01-12
+    - `split(' ')` 处理字符串
+    - 字符串数组转 `length` 数组
+    - 找 `length` 数组里面的最小值
