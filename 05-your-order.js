@@ -38,3 +38,13 @@ function order (words) {
   // arr => str
   return ret.join(' ');
 }
+
+/*************************************  2016-01-12  ***************************************/
+function order (words) {
+  return words
+    .split(' ')
+    .sort((a, b) => {
+      return a.match(/\d/) - b.match(/\d/);
+    })
+    .join(' ');
+}
